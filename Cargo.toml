@@ -1,0 +1,12 @@
+[package]
+name = "RDX"
+version = "0.1.0"
+edition = "2024"
+authors = ["Prashant Rewar"]
+description = "A Redis-like in-memory database implemented in Rust"
+
+[dependencies]
+tokio = { version = "1.28", features = ["full"] }
+bytes = "1.4"
+thiserror = "1.0"
+anyhow = "1.0"
