@@ -62,6 +62,18 @@ pub fn encode_bulk(msg: &str) -> String {
     format!("${}\r\n{}\r\n", msg.len(), msg)
 }
 
+pub fn encode_array(items: Vec<Option<String>>) -> String {
+    let mut result = format!("*{}\r\n", items.len());
+//   Work here at stage 5  
+    for item in items {
+        match item {
+            Some(v) => result.push_str(&format!("${}\r\n{}\r\n", v.len(), v)),
+            None => result.push_str("$-1\r\n"),
+        }
+    }
+    result
+}
+
 pub fn encode_nil() -> String {
     "$-1\r\n".to_string()
 }

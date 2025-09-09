@@ -6,8 +6,10 @@
   - [x] Hashmap to store key-value
   - [x] PING, ECHO, GET, SET commands
   - [ ] RESP2 parser for arrays and bulk strings
+  - [ ] Implement custom hash to enhance searching and add more data types.
   - [ ] Update Db to store (value, Option<expire_at>)
   - [ ] Implement EXPIRE command (if key expired, return nil)
+  - [ ] Impliment Other required Commands
   - [ ] Background task to remove expired keys (periodic cleanup)
 
 - Stage 2 
